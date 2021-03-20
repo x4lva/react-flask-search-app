@@ -1,0 +1,47 @@
+.search-logo{
+    font-size: 100px;
+    color: #fff;
+    font-family: FuturaMediumC, serif;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.search-form-text{
+    border: none;
+    background-color: #fff;
+    width: 100%;
+    outline: none;
+    position: relative;
+    z-index: 1;
+    padding: 10px 25px 10px 20px;
+    color: #000;
+    font-size: 20px;
+    border-bottom-right-radius: 0;
+    font-family: FuturaBookC, serif;
+    border-radius: 3px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.search-container{
+    width: 700px;
+}
+.search-form{
+    width: 100%;
+    display: flex;
+}
+.search-form-submit{
+    position: relative;
+    right: 0px;
+    color: #fff;
+    z-index: 2;
+    outline: none;
+    border: none;
+    padding: 10px 25px;
+    font-family: FuturaDemiC, serif;
+    border-radius: 0px 3px 3px 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.search-form-submit:focus{
+    outline: none;
+    border: none;
+}
