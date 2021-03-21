@@ -1,0 +1,31 @@
+.search-data-list-item{
+    padding: 15px 25px;
+    box-shadow: 0px 6px 5px -6px #00000040;
+}
+.search-data-list-item-title{
+    font-size: 23px;
+    color: #000;
+    font-weight: normal;
+    display: flex;
+    justify-content: space-between;
+    font-family: FuturaMediumC;
+}
+.search-data-list-item-desc{
+    font-size: 17px;
+    color: #46506c;
+    padding-bottom: 10px;
+    font-family: FuturaBookC;
+}
+.search-data-list-item-link{
+    padding: 5px 15px;
+    border-radius: 20px;
+    background-color: #1F1F1F;
+    color: #fff;
+    margin-right: 5px;
+    font-family: FuturaBookC;
+    width: fit-content;
+}
+.search-data-list-item-link a{
+    text-decoration: none;
+    color: #ffffff !important;
+}

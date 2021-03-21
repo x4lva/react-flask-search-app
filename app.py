@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/data', methods=['POST'])
 def hello_world():
-    data = request.json.search
+    data = request.json["search"]
 
     return jsonify({"habr": qwery_parser.parse_habrahabr(data),
                     "stackoverflow": qwery_parser.parse_stackoverflow(data),

@@ -23,7 +23,7 @@ def parse_habrahabr(search):
 def parse_stackoverflow(search):
     res = []
     page = requests.get("https://api.stackexchange.com/2.2/search/advanced",
-                        params={"order": "desc", "sort": "activity", "q": search, "site": "stackoverflow"})
+                        params={"order": "desc", "sort": "activity", "q": search, "site": "stackoverflow", "pagesize": 20})
     for item in page.json()['items']:
         res.append({"link": item['link'],
                     "title": item['title'],
@@ -49,7 +49,7 @@ def parse_toaster(search):
 
 def parse_google(search):
     res = []
-    url = "https://google-search3.p.rapidapi.com/api/v1/search/q=" + search.replace(" ", "+") + "&num=25"
+    url = "https://google-search3.p.rapidapi.com/api/v1/search/q=" + search.replace(" ", "+") + "&num=20"+"&lr=lang_uk"
 
     headers = {
         'x-rapidapi-key': "a18a302019msh0b0737751faf28ep1608a1jsnae0b2af83904",

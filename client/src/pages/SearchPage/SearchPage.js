@@ -1,27 +1,35 @@
 import React from "react";
-import { useState } from "react";
 import "./SearchPage.css";
+import { useDispatch, useSelector } from "react-redux";
+import { useCallback } from "react";
+import {
+    setSearchValue,
+    toggleSearchIsSubmitted,
+} from "../../redux/actions/MainActions";
 
 function SearchPage(props) {
-    const [searchValue, setSearchValue] = useState("");
+    const dispatch = useDispatch();
 
-    const onSearchValueChange = (e) => {
-        setSearchValue(e.target.value);
-    };
+    const { searchValue } = useSelector((state) => state.mainState);
 
-    const onSearchSubmit = (e) => {
+    const setSearch = useCallback((e) => {
+        dispatch(setSearchValue(e.target.value));
+    }, []);
+
+    const submitSearchForm = useCallback((e) => {
         e.preventDefault();
-    };
+        dispatch(toggleSearchIsSubmitted());
+    }, []);
 
     return (
         <div className="search-wrapper min-vh-100 w-100 d-flex flex-column justify-content-center align-items-center">
             <div className="search-container">
                 <div className="search-logo">Gooder</div>
-                <form onSubmit={onSearchSubmit} className="search-form">
+                <form onSubmit={submitSearchForm} className="search-form">
                     <input
                         placeholder="What are you searching for..."
                         value={searchValue}
-                        onChange={onSearchValueChange}
+                        onChange={setSearch}
                         className="search-form-text"
                         type="text"
                     />
