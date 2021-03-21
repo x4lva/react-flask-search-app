@@ -16,6 +16,16 @@ export const setSearchValue = (searchValue) => (dispatch, getState) => {
     );
 };
 
+export const clearData = () => (dispatch, getState) => {
+    dispatch(
+        updateUserData({
+            searchHabrCount: 5,
+            searchStackoverflowCount: 3,
+            searchData: {},
+        })
+    );
+};
+
 export const toggleSearchIsSubmitted = () => (dispatch, getState) => {
     dispatch(
         updateUserData({
@@ -43,4 +53,21 @@ export const toggleSearchIsSubmitted = () => (dispatch, getState) => {
                 })
             );
         });
+};
+
+export const addHabrCount = () => (dispatch, getState) => {
+    dispatch(
+        updateUserData({
+            searchHabrCount: getState().mainState.searchHabrCount + 5,
+        })
+    );
+};
+
+export const addStackCount = () => (dispatch, getState) => {
+    dispatch(
+        updateUserData({
+            searchStackoverflowCount:
+                getState().mainState.searchStackoverflowCount + 3,
+        })
+    );
 };

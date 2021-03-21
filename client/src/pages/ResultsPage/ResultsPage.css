@@ -9,6 +9,24 @@
 .search-data-container{
     width: 1200px;
 }
-.search-data-list{
+.search-data-container-item {
     width: 49%;
+    margin-bottom: 25px;
+}
+.search-back{
+    position: fixed;
+    top: 24px;
+    left: 24px;
+    padding: 20px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background: #1F1F1F;
+    width: 30px;
+    height: 30px;
+}
+.search-back:hover {
+    cursor: pointer;
 }

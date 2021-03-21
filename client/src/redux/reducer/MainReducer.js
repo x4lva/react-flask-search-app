@@ -5,6 +5,8 @@ const initialState = {
     searchIsSubmitted: false,
     searchData: {},
     searchIsLoading: true,
+    searchStackoverflowCount: 3,
+    searchHabrCount: 5,
 };
 
 const mainReducer = (state = initialState, action) => {

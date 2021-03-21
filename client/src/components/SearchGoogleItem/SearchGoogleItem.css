@@ -19,7 +19,7 @@
 .search-data-list-item-link{
     padding: 5px 15px;
     border-radius: 20px;
-    background-color: #1F1F1F;
+    background-color: #333333;
     color: #fff;
     margin-right: 5px;
     font-family: FuturaBookC;
@@ -28,4 +28,24 @@
 .search-data-list-item-link a{
     text-decoration: none;
     color: #ffffff !important;
+}
+.search-data-list-stack-data{
+    font-family: FuturaBookC;
+    font-size: 15px;
+    background: #333333;
+    border-radius: 30px;
+    height: fit-content;
+    min-width: 30px;
+    padding: 0 13px;
+    margin-left: 6px;
+    color: #fff;
+    text-align: center;
+}
+span.search-data-author {
+    background: #333333;
+    color: #fff;
+    padding: 1px 11px;
+    font-size: 16px;
+    font-family: FuturaBookC;
+    border-radius: 15px;
 }

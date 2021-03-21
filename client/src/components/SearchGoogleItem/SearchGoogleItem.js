@@ -9,22 +9,24 @@ function SearchGoogleItem(props) {
 
     const googleData = searchData.google.map((el) => {
         return (
-            <div className="search-data-list-item">
-                <div className="search-data-list-item-title">{el.title}</div>
-                <div className="search-data-list-item-desc">
-                    {el.description}
-                </div>
-                <div className="search-data-list-item-link">
-                    <a target="_blank" href={el.link}>
+            <a target="_blank" href={el.link}>
+                <div className="search-data-list-item">
+                    <div className="search-data-list-item-title">
+                        {el.title}
+                    </div>
+                    <div className="search-data-list-item-desc">
+                        {el.description}
+                    </div>
+                    <div className="search-data-list-item-link">
                         {el.link
                             .replaceAll("https://", "")
                             .replaceAll("http://", "")
                             .replaceAll("/", " › ")
                             .substring(0, 50)
                             .toLowerCase()}
-                    </a>
+                    </div>
                 </div>
-            </div>
+            </a>
         );
     });
 
